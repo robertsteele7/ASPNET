@@ -33,7 +33,8 @@ namespace Testing
             });
 
             services.AddTransient<IProductRepository, ProductRepository>();
-
+            services.AddTransient<IEmployeeRepository, EmployeeRepository>();
+            
             services.AddControllersWithViews();
         }
 

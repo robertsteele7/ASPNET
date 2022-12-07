@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Employee>
+
+<h2>Employees</h2>
+
+<div style="display: block">
+    <a href="/Employee/InsertEmployee/">Create a New Employee</a>
+</div>
+
+<table class="table">
+    <tr>
+        <th>EmployeeID</th>
+        <th>FirstName</th>
+        <th>MiddleInitial</th>
+        <th>LastName</th>
+        <th>EmailAddress</th>
+        <th>PhoneNumber</th>
+        <th>Title</th>
+        <th>DateOfBirth</th>
+    </tr>
+
+    @foreach (var employee in Model)
+    {
+        <tr>
+            <td><a href=/Employee/ViewEmployee/@employee.EmployeeID>@employee.EmployeeID</a></td>
+            <td>@employee.FirstName</td>
+            <td>@employee.MiddleInitial</td>
+            <td>@employee.LastName</td>
+            <td>@employee.EmailAddress</td>
+            <td>@employee.PhoneNumber</td>
+            <td>@employee.Title</td>
+            <td>@employee.DateOfBirth</td>
+        </tr>
+
+    }
+</table>

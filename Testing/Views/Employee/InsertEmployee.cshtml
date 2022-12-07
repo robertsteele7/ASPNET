@@ -1,0 +1,38 @@
+﻿@model Employee
+<h2>Create a New Employee</h2>
+@using (Html.BeginForm("InsertEmployeeToDatabase", "Employee", "Post"))
+{
+        <input asp-for="EmployeeID" type="hidden" value="" />
+
+        <label asp-for="FirstName" class="control-label">FirstName</label>
+        <input type="text" name="FirstName" class="form-control" value="" />
+
+        <label asp-for="MiddleInitial" class="control-label">MiddleInitial</label>
+        <input type="text" name="MiddleInitial" class="form-control" value=""/>
+
+        <label asp-for="LastName" class="control-label">LastName</label>
+        <input type="text" name="LastName" class="form-control" value="" />
+
+        <label asp-for="EmailAddress" class="control-label">EmailAddress</label>
+        <input type="text" name="EmailAddress" class="form-control" value="" />
+
+        <label asp-for="PhoneNumber" class="control-label">PhoneNumber</label>
+        <input type="text" name="PhoneNumber" class="form-control" value="" />
+
+        <label asp-for="Title" class="control-label">Title</label>
+        <input type="text" name="Title" class="form-control" value="" />
+
+        <label asp-for="DateOfBirth" class="control-label">DateOfBirth</label>
+        <input type="date" name="DateOfBirth" class="form-control" value="" />
+        // Use if your employee has a collection of something //
+        //<div class="form-group">
+        //    <label for="">Select an Employee</label>
+         //   <select class="form-control" name="EmployeeID" value="">
+          //  @foreach (var c in Model.Sales)
+          //  {
+          //              <option value="@cat.EmployeeID">@cat.EmployeeID @cat.FirstName @cat.MiddleInitial @cat.LastName @cat.EmailAddress @cat.PhoneNumber @cat.Title @cat.DateOfBirth</option>
+           // }
+          //  </select>
+       // </div>
+        <input type="submit" value="Create Employee" class="btn btn-primary" />
+}
